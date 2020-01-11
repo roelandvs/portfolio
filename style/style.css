@@ -1,0 +1,281 @@
+/*---------Algemeen---------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+::selection {
+    background: orange;
+    color: white;
+}
+
+html {
+    width: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    width: 70%;
+    margin: auto;
+}
+
+section {
+    margin: 0px auto 0px auto;
+    width: 50vw;
+    min-width: 200px;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px auto 0px;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    margin: auto;
+}
+
+p {
+    margin: 20px auto;
+    max-width: 800px;
+    line-height: 1.5em;
+    color: dimgrey;
+}
+
+a {
+    color: orange;
+}
+
+img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 100%;
+}
+
+/*---------Menu---------*/
+
+header ul {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 20px 0;
+    width: 70vw;
+    margin: auto;
+}
+
+header li {
+    padding: 20px 40px 20px 0;
+    font-size: 1em;
+}
+
+#portfolioMenu {
+    margin-right: auto;
+    padding: 20px 30px 20px 0;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-family: 'Raleway';
+}
+
+#portfolioMenu a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+header a {
+    text-decoration: none;
+    color: black;
+    padding: 20px 0px;
+    font-size: 1em;
+}
+
+header li a:hover {
+    text-decoration: underline;
+    color: orange;
+    transition: 0.3s;
+}
+
+/*---------Over mij---------*/
+
+#homeInfo {
+    width: 100%;
+    margin: auto;
+    min-width: 200px;
+}
+
+#homeInfo h1 {
+    text-align: left;
+}
+
+#homeInfo ul {
+    margin: auto 0px auto 20px;
+    color: dimgrey;
+}
+
+#homeInfo img {
+    float: right;
+    margin: 0 0 auto 30px;
+    width: 35%;
+    min-width: 250px;
+    max-width: 275px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+#homeInfo p {
+    max-width: 500px;
+    margin: 20px auto 0 0;
+}
+
+/*---------Projecten pagina---------*/
+
+#lowlandsTel {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto 0;
+    max-width: 800px;
+}
+
+#lowlandsTel img {
+    width: 40%;
+    min-width: 150px;
+    max-width: 400px;
+    height: 60%;
+    margin: 20px 0 0 20px;
+}
+
+#lowlandsTel p {
+    min-width: 100px;
+    width: 50%;
+    margin: 20px auto 0 0;
+}
+
+/*---------Poster deel---------*/
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.illustrator {
+    width: 41%;
+    min-width: 250px;
+    height: 58%;
+    margin: 20px auto;
+    padding: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+}
+
+.illustrator:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    width: 44%;
+}
+
+.posters p {
+    width: 45%;
+    min-width: 250px;
+    margin: 20px auto;
+}
+
+/*---------Footer---------*/
+
+#footerHome {
+    width: 100%;
+    background-color: #181818;
+    height: 40px;
+    margin-top: 400px;
+}
+
+footer {
+    background-color: #181818;
+    height: 40px;
+    margin: 100px auto 0;
+    bottom: 0px;
+    width: 100vw:
+}
+
+/*---------Media queries---------*/
+
+@media screen and (max-width: 1000px) {
+
+    #homeInfo img {
+        margin: 30px 30px auto 10%;
+    }
+}
+
+@media screen and (max-width: 710px) {
+
+    /*---------Over Mij pagina---------*/
+    #homeInfo img {
+        margin: 30px auto 30px 50px;
+        float: none;
+        display: block;
+    }
+
+    /*---------Projecten pagina---------*/
+    #lowlandsTel {
+        display: contents;
+        margin-top: 10px;
+    }
+
+    #lowlandsTel img {
+        width: 60%;
+        margin: 20px 0 0 0;
+    }
+
+    #lowlandsTel p {
+        width: 100%;
+        margin: 0 auto 0 0;
+    }
+
+    .illustrator {
+        width: 65%;
+    }
+
+    .illustrator:hover {
+        width: 65%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .posters p {
+        width: 80vw;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        width: 80%;
+    }
+
+    section {
+        width: 80vw;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+    
+    header ul {
+        width: 80vw;
+    }
+
+    #homeInfo img {
+        margin: 30px auto 0;
+        float: none;
+    }
+
+    #homeInfo p {
+        width: 90%;
+        margin: 30px auto;
+    }
+}

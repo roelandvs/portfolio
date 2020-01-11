@@ -1,0 +1,286 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: white;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Aanpassing van de kleur als je tekst selecteerd*/
+::selection {
+    background: #b5473e;
+    color: white;
+}
+
+header ul {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid gray;
+    list-style-type: none;
+}
+
+header ul li {
+    padding: 20px 0px;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+    color: #b5473e;
+}
+
+header ul li a {
+    color: black;
+    font-weight: 1000;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+
+section {
+    margin: 70px auto 0px auto;
+    width: 50%;
+    min-width: 300px;
+}
+
+img {
+    width: 100%;
+}
+
+section img {
+    margin: 30px auto;
+}
+
+#homeInfo {
+    margin: 30px auto;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    margin: 0px auto 40px auto;
+    font-size: 2em;
+}
+
+p {
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.5em;
+}
+
+.headerImg {
+    width: 100%;
+    padding-bottom: 30px;
+    margin: auto;
+}
+
+#bandLogo {
+    width: 10vw;
+    margin: auto;
+}
+
+footer {
+    background-color: #181818;
+    margin-top: 100px;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+footer ul {
+    min-width: 100px;
+}
+
+footer ul li {
+    color: lightgray;
+    margin: 2px 30px;
+    max-width: 400px;
+}
+
+footer ul li a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+li.footerBron {
+    list-style-type: none;
+    max-width: 350px;
+    min-width: 100px;
+    margin: auto;
+}
+
+.ulHead {
+    margin: 0px 0px 10px 10px;
+    list-style-type: none;
+    font-size: 1.2em;
+    color: lightgray;
+}
+
+#albumDiv section {
+    margin: 0px auto;
+}
+
+#h1Albums {
+    margin-bottom: 50px;
+}
+
+div h2 {
+    margin: 0px;
+}
+
+.albumCover {
+    min-width: 50vw;
+    margin: auto;
+}
+
+.albumInfo {
+    padding-bottom: 0px;
+}
+
+.albumCover img,
+iframe {
+    width: 30vw;
+    min-width: 300px;
+    display: flex;
+    margin: auto;
+}
+
+iframe {
+    height: 180px;
+    border: 0px;
+}
+
+#albumDiv {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+iframe + p {
+    min-width: 300px;
+    height: 360px;
+    margin: 30px auto 0px auto;
+    width: 30vw;
+}
+
+.albumYear {
+    font-size: 1.6em;
+    text-align: center;
+    margin: 0px auto 30px auto;
+}
+
+table {
+    margin: 40px auto;
+    width: 55%;
+    text-align: center;
+    border-spacing: 2px 15px;
+    max-width: 600px;
+}
+
+td {
+    padding: 15px 5px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+
+th {
+    font-size: 1.5em;
+    padding: 20px;
+    font-weight: 2000;
+    background-color: #181818;
+    color: white;
+}
+
+.tableDate {
+    background-color: #b5473e;
+    color: white;
+    font-weight: 1000;
+    width: 100px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+/*De td heeft een class ipv de tr, omdat de tr niet werk*/
+.tdEmpty {
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+#thDate {
+    border: 0px;
+    width: 0px;
+    background-color: white;
+}
+
+/*Verandering bij kleiner scherm*/
+@media (min-width: 320px) and (max-width: 500px) {
+    
+    nav {
+        font-size: 0.8em;
+    }
+
+    section img {
+        width: 100%;
+        margin: 15px auto;
+    }
+    
+    section, .albumCover img, iframe, iframe + p {
+        min-width: 80vw;
+        margin: auto;
+    }
+    
+    section {
+        width: 80vw;
+    }
+    
+    <!-- Als je de headerImg wil vergroten op telefoon moet je alle fotos vergroten en dan in de mediaquery plaatsen-->
+    <!-- Het bandlogo moet groter-->
+    <!-- Constant gebruik van reelafstand tussen koppen-->
+    
+    #albumDiv {
+        flex-direction: column;
+    }
+
+    .footerBron {
+        max-width: 200px;
+    }
+    
+    iframe+p {
+        margin: 20px 0px 0px 0px;
+    }
+
+    #pFreakystyley {
+        height: 370px;
+    }
+
+    #pUMPP {
+        height: 450px;
+    }
+
+    #pBTW {
+        height: 400px;
+    }
+
+    #pBSSM,
+    #pCaliforniacation,
+    #pStadiumArcadium {
+        height: 340px;
+    }
+
+}

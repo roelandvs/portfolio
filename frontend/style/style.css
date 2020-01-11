@@ -1,0 +1,280 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Repro89-Regular, Baloo Bhai;
+}
+
+/*-----------Algemeen-----------*/
+body {
+    width: 100%;
+    background-image: url("../img/achtergrond.png");
+    background-size: contain;
+}
+
+p {
+    color: white;
+    font-size: 0.8em;
+    letter-spacing: 0.1em;
+    margin: 0 auto 0;
+    width: 80%;
+}
+
+h1 {
+    font-size: 1.4em;
+    margin: 0 auto 0;
+    width: 80%;
+}
+
+h2 {
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/*-----------Menu-----------*/
+nav {
+    background-color: #0026cc;
+    -webkit-box-shadow: inset 0px -5px 10px 6px rgba(0, 0, 0, 0.43);
+}
+
+header ul {
+    max-width: 1000px;
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 15px 0px;
+}
+
+header ul li {
+    padding: 7px;
+    margin: 0px 10px;
+    color: white;
+    display: none;
+}
+
+#toonMenu {
+    display: flex;
+    text-decoration: underline;
+}
+
+#verbergMenu {
+    display: none;
+    text-decoration: underline;
+}
+
+header ul li a {
+    color: white;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+header ul li a:hover {
+    color: #4cd066;
+    transition: all 0.5s;
+}
+
+/*-----------Footer-----------*/
+footer {
+    height: 300px;
+    background-color: #0026cc;
+    -webkit-box-shadow: inset 0px 4px 10px 6px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    padding: 40px 10vw;
+}
+
+footer ul {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+footer li:nth-child(1) {
+    margin-left: 0;
+}
+
+footer li {
+    color: white;
+    margin: 10px 5px;
+}
+
+svg {
+    fill: white;
+    width: 50px;
+    transition: all 0.7s;
+}
+
+svg:hover {
+    fill: #4cd066;
+}
+
+legend {
+    color: white;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+
+input {
+    width: 100%;
+    padding: 15px 0 15px 15px;
+    margin: 15px auto;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+/*-----------Programma pagina-----------*/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px auto;
+    max-width: 1750px;
+}
+
+article {
+    background-color: #4cd066;
+    -webkit-box-shadow: inset 0px 1px 10px 10px rgba(0, 0, 0, 0.75);
+    width: 90vw;
+    margin: 2vw auto;
+    max-width: 500px;
+    max-height: 310px;
+    padding: 20px 0px;
+    /*    position relative voor de z-index*/
+    position: relative;
+    z-index: 0;
+}
+
+div {
+    width: 80%;
+    height: 70%;
+    margin: 2% auto;
+    -webkit-box-shadow: inset 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+article div img {
+    width: 110%;
+    height: 110%;
+    position: relative;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.artiesten {
+    color: black;
+    text-decoration: none;
+}
+
+/*-----------JS classes-----------*/
+header ul li.zichtbaar {
+    display: flex;
+}
+
+header ul li.onzichtbaar {
+    display: none;
+}
+
+header ul li#toonMenu.zichtbaarId1 {
+    display: flex;
+}
+
+header ul li#verbergMenu.zichtbaarId2 {
+    display: flex;
+}
+
+header ul li#toonMenu.onzichtbaarId1 {
+    display: none;
+}
+
+header ul li#verbergMenu.onzichtbaarId2 {
+    display: none;
+}
+
+/*-----------Media Queries-----------*/
+
+@media screen and (min-width: 550px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 0.8em;
+        height: 2em;
+    }
+
+    article {
+        padding: 30px 0px;
+    }
+
+    header ul {
+        justify-content: center;
+    }
+
+    header ul li {
+        margin: 0px 10px;
+        /*   maakt menu weer zichtbaar*/
+        display: flex;
+    }
+
+    header ul li a {
+        font-size: 1em;
+    }
+    
+    div {
+        height: 220px;
+    }
+
+    /*-----------JS mobiel classes terugkeren-----------*/
+    header ul li.onzichtbaar {
+        display: flex;
+    }
+
+    header ul li.zichtbaar {
+        display: none;
+    }
+
+    header ul li#toonMenu.zichtbaarId1,
+    header ul li#toonMenu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    h1 {
+        font-size: 1.3em;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+
+    article {
+        width: 40vw;
+        height: 25vw;
+        margin: 1vw;
+        max-height: 290px;
+    }
+
+    article div {
+        width: 75%;
+        height: 75%;
+        margin: 3% 12.5% 0 12.5%;
+        overflow: hidden;
+    }
+
+    article:hover img {
+        transform: scale(1.1);
+    }
+
+    /*-----------Footer-----------*/
+    input {
+        width: 50%;
+    }
+
+}

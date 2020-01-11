@@ -227,7 +227,7 @@ footer {
     }
 
     #lowlandsTel img {
-        width: 60%;
+        width: 100%;
         margin: 20px 0 0 0;
     }
 
@@ -237,11 +237,11 @@ footer {
     }
 
     .illustrator {
-        width: 65%;
+        width: 75%;
     }
 
     .illustrator:hover {
-        width: 65%;
+        width: 80%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 
@@ -277,5 +277,14 @@ footer {
     #homeInfo p {
         width: 90%;
         margin: 30px auto;
+    }
+    
+        .illustrator {
+        width: 90%;
+    }
+
+    .illustrator:hover {
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 }

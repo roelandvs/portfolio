@@ -1,0 +1,123 @@
+body {
+    /*link background: https://www.shvpl.info/imagepgkl-pokemon-battle-background.htm*/
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    font-family: open sans;
+    font-weight: 100;
+}
+
+#menu {
+    position: absolute;
+    top: 7vw;
+    right: 19vw;
+    text-align: center;
+    margin: 0px;
+}
+
+#menu p {
+    margin: 10px 0px 30px 0px;
+}
+
+#menu h1 {
+    margin: 0px 0px 20px 0px;
+    font-size: 2.5em;
+}
+
+#burger,
+#spruitjes {
+    height: 6vw;
+}
+
+#bord {
+    position: absolute;
+    top: 3vw;
+    right: 10vw;
+    height: 50vw;
+    width: 25vw;
+}
+
+#xtc {
+    height: 3vw;
+}
+
+#thee {
+    margin: auto auto auto 15px;
+    height: 5vw;
+}
+
+#lichaam {
+    position: absolute;
+    top: 20vw;
+    left: 12vw;
+    height: 25vw;
+}
+
+#pokeball {
+    position: absolute;
+    top: 41vw;
+    left: 48vw;
+    height: 5vw;
+}
+
+#hoofd,
+#blij {
+    position: absolute;
+    top: 15vw;
+    left: 23vw;
+    height: 13vw;
+}
+
+#grijzeBalk {
+    position: absolute;
+    top: 50vw;
+    left: 15vw;
+    height: 10px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: beige;
+}
+
+#health {
+    position: absolute;
+    top: 50vw;
+    left: 15vw;
+    height: 10px;
+    width: 500px;
+    border-radius: 10px;
+    border: 2px solid;
+}
+
+#metadata {
+    position: absolute;
+    bottom: 1%;
+    right: 11.5%;
+}
+
+.onzichtbaar {
+    opacity: 0;
+}
+
+.zichtbaar {
+    opacity: 100;
+}
+
+.greenColor {
+    background-color: green;
+}
+
+.yellowColor {
+    background-color: #F5D834;
+}
+
+.redColor {
+    background-color: red;
+}
+
+.daling {
+    width:  -1;
+}

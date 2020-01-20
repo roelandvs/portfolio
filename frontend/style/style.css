@@ -1,33 +1,41 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: Repro89-Regular, Baloo Bhai;
+}
+
+@font-face {
+  font-family: LLHvH-Open89;
+  src: url('font/LLHvH-Open89.ttf');
+}
+
+@font-face {
+  font-family: ll-icons;
+  src: url('font/ll-icons.ttf');
 }
 
 /*-----------Algemeen-----------*/
 body {
     width: 100%;
-    background-image: url("../img/achtergrond.png");
-    background-size: contain;
+    font-family: LLHvH-Open89;
 }
 
 p {
-    color: white;
-    font-size: 0.8em;
-    letter-spacing: 0.1em;
-    margin: 0 auto 0;
-    width: 80%;
+    color: black;
 }
 
 h1 {
     font-size: 1.4em;
     margin: 0 auto 0;
     width: 80%;
+    text-transform: uppercase;
 }
 
 h2 {
     color: white;
-    font-size: 1em;
+    font-size: 0.7em;
+    margin: 0 auto 0;
+    width: 80%;
+    text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
@@ -35,10 +43,23 @@ ul {
     list-style-type: none;
 }
 
+
+/*-----------Video-----------*/
+#videoHead {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -5px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
+}
+
+video {
+    width: 200%;
+    margin: 0 auto 0 -50%;
+}
+
 /*-----------Menu-----------*/
 nav {
     background-color: #0026cc;
-    -webkit-box-shadow: inset 0px -5px 10px 6px rgba(0, 0, 0, 0.43);
 }
 
 header ul {
@@ -57,6 +78,7 @@ header ul li {
     margin: 0px 10px;
     color: white;
     display: none;
+    text-transform: uppercase;
 }
 
 #toonMenu {
@@ -80,11 +102,60 @@ header ul li a:hover {
     transition: all 0.5s;
 }
 
+/*-----------Programma pagina-----------*/
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -10px auto 0;
+    padding: 70px 0;
+    max-width: 1750px;
+    background-image: url("../img/achtergrond3.png");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    z-index: 1;
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 1);
+}
+
+article {
+    background-color: #4cd066;
+    -webkit-box-shadow: inset 0px 0px 20px 12px rgba(0, 0, 0, 1);
+    width: 90vw;
+    margin: 2vw auto;
+    max-width: 500px;
+    max-height: 310px;
+    padding: 20px 0px;
+    position: relative;
+    z-index: 0;
+}
+
+div {
+    width: 80%;
+    max-height: 230px;
+    margin: 10px auto 0;
+    -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 1);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+article div img {
+    width: 100%;
+    margin: 0 auto -5px;
+    position: relative;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.artiesten {
+    color: black;
+    text-decoration: none;
+}
+
 /*-----------Footer-----------*/
 footer {
     height: 300px;
     background-color: #0026cc;
-    -webkit-box-shadow: inset 0px 4px 10px 6px rgba(0, 0, 0, 0.5);
     margin: 0 auto;
     padding: 40px 10vw;
 }
@@ -92,6 +163,8 @@ footer {
 footer ul {
     display: flex;
     margin-bottom: 30px;
+    font-family: ll-icons;
+    font-size: 2.5em;
 }
 
 footer li:nth-child(1) {
@@ -101,16 +174,11 @@ footer li:nth-child(1) {
 footer li {
     color: white;
     margin: 10px 5px;
+    transition: all 0.5s;
 }
 
-svg {
-    fill: white;
-    width: 50px;
-    transition: all 0.7s;
-}
-
-svg:hover {
-    fill: #4cd066;
+footer li:hover {
+    color: #4cd066;
 }
 
 legend {
@@ -125,49 +193,6 @@ input {
     margin: 15px auto;
     font-size: 1em;
     box-sizing: border-box;
-}
-
-/*-----------Programma pagina-----------*/
-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 40px auto;
-    max-width: 1750px;
-}
-
-article {
-    background-color: #4cd066;
-    -webkit-box-shadow: inset 0px 1px 10px 10px rgba(0, 0, 0, 0.75);
-    width: 90vw;
-    margin: 2vw auto;
-    max-width: 500px;
-    max-height: 310px;
-    padding: 20px 0px;
-    /*    position relative voor de z-index*/
-    position: relative;
-    z-index: 0;
-}
-
-div {
-    width: 80%;
-    height: 70%;
-    margin: 2% auto;
-    -webkit-box-shadow: inset 0px 1px 10px 10px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-}
-
-article div img {
-    width: 110%;
-    height: 110%;
-    position: relative;
-    z-index: -1;
-    transition: 0.5s;
-}
-
-.artiesten {
-    color: black;
-    text-decoration: none;
 }
 
 /*-----------JS classes-----------*/
@@ -202,13 +227,14 @@ header ul li#verbergMenu.onzichtbaarId2 {
         font-size: 1.8em;
     }
 
-    p {
+    h2 {
         font-size: 0.8em;
         height: 2em;
     }
 
-    article {
-        padding: 30px 0px;
+    video {
+        width: 150%;
+        margin: 0 auto 0 -25%;
     }
 
     header ul {
@@ -223,10 +249,6 @@ header ul li#verbergMenu.onzichtbaarId2 {
 
     header ul li a {
         font-size: 1em;
-    }
-    
-    div {
-        height: 220px;
     }
 
     /*-----------JS mobiel classes terugkeren-----------*/
@@ -250,31 +272,41 @@ header ul li#verbergMenu.onzichtbaarId2 {
         font-size: 1.3em;
     }
 
-    p {
+    h2 {
         font-size: 0.7em;
+    }
+
+    video {
+        width: 100%;
+        margin: 0 auto;
     }
 
     article {
         width: 40vw;
-        height: 25vw;
+        /*        height: 23vw;*/
         margin: 1vw;
+        padding: 30px 0px;
         max-height: 290px;
     }
 
     article div {
-        width: 75%;
-        height: 75%;
-        margin: 3% 12.5% 0 12.5%;
+        width: 80%;
+        margin: 0px auto -5px;
         overflow: hidden;
     }
 
     article:hover img {
-        transform: scale(1.1);
+        transform: scale(1.15);
+    }
+
+    article:hover div {
+        -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
     }
 
     /*-----------Footer-----------*/
     input {
         width: 50%;
+        font-family: LLHvH-Open89;
     }
 
 }

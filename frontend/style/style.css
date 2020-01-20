@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: ll-icons;
-  src: url("../font/llicons");
+  src: url("../font/ll-icons.woff");
 }
 
 /*-----------Algemeen-----------*/
@@ -45,20 +45,6 @@ h3 {
 
 ul {
     list-style-type: none;
-}
-
-
-/*-----------Video-----------*/
-#videoHead {
-    width: 100%;
-    overflow: hidden;
-    margin-top: -5px;
-    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
-}
-
-video {
-    width: 200%;
-    margin: 0 auto 0 -50%;
 }
 
 /*-----------Menu-----------*/
@@ -104,6 +90,19 @@ header ul li a {
 header ul li a:hover {
     color: #4cd066;
     transition: all 0.5s;
+}
+
+/*-----------Video-----------*/
+#videoHead {
+    width: 100%;
+    overflow: hidden;
+    margin-top: -5px;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
+}
+
+video {
+    width: 200%;
+    margin: 0 auto 0 -50%;
 }
 
 /*-----------Programma pagina-----------*/
@@ -167,7 +166,7 @@ footer {
 footer ul {
     display: flex;
     margin-bottom: 30px;
-    font-family: llicons;
+    font-family: ll-icons;
     font-size: 2.5em;
 }
 

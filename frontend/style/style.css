@@ -4,13 +4,13 @@
 }
 
 @font-face {
-  font-family: LLHvH-Open89;
-  src: url("../font/LLHvH-Open89.woff2") format("woff2");
+    font-family: LLHvH-Open89;
+    src: url("../font/LLHvH-Open89.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: ll-icons;
-  src: url("../font/ll-icons.woff");
+    font-family: ll-icons;
+    src: url("../font/ll-icons.woff");
 }
 
 /*-----------Algemeen-----------*/
@@ -47,9 +47,19 @@ ul {
     list-style-type: none;
 }
 
-/*-----------Menu-----------*/
+/*-----------Header-----------*/
+header {
+    position: fixed;
+    top: 60px;
+    z-index: 1;
+}
+
 nav {
     background-color: #0026cc;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    -webkit-box-shadow: inset 0px -12px 12px -2px rgba(0, 0, 0, 0.75);
 }
 
 header ul {
@@ -92,9 +102,9 @@ header ul li a:hover {
     transition: all 0.5s;
 }
 
-/*-----------Video-----------*/
+/*-----------Programma pagina-video-----------*/
 #videoHead {
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     margin-top: -5px;
     -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
@@ -103,6 +113,8 @@ header ul li a:hover {
 video {
     width: 200%;
     margin: 0 auto 0 -50%;
+    position: fixed;
+    top: 60px;
 }
 
 /*-----------Programma pagina-----------*/
@@ -110,14 +122,14 @@ section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: -10px auto 0;
+    width: 100%;
+    margin: 55vw auto 0;
     padding: 70px 0;
-    max-width: 1750px;
     background-image: url("../img/achtergrond3.png");
     background-size: cover;
     background-position: top;
     position: relative;
-    z-index: 1;
+    /*    z-index: 0;*/
     -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 1);
 }
 
@@ -225,7 +237,7 @@ header ul li#verbergMenu.onzichtbaarId2 {
 
 /*-----------Media Queries-----------*/
 
-@media screen and (min-width: 550px) {
+@media screen and (min-width: 560px) {
     h1 {
         font-size: 1.8em;
     }
@@ -235,9 +247,14 @@ header ul li#verbergMenu.onzichtbaarId2 {
         height: 2em;
     }
 
+    section {
+        margin: 45vw auto 0;
+    }
+
     video {
         width: 150%;
         margin: 0 auto 0 -25%;
+        top: 85px;
     }
 
     header ul {
@@ -282,6 +299,11 @@ header ul li#verbergMenu.onzichtbaarId2 {
     video {
         width: 100%;
         margin: 0 auto;
+        top: 85px;
+    }
+
+    section {
+        margin: 31vw auto 0;
     }
 
     article {
@@ -310,5 +332,14 @@ header ul li#verbergMenu.onzichtbaarId2 {
         width: 50%;
         font-family: LLHvH-Open89;
     }
+}
 
+@media screen and (min-width: 1060px) {
+    section {
+        margin: 25vw auto 0;
+    }
+
+    video {
+        top: 60px;
+    }
 }

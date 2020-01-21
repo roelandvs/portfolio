@@ -28,12 +28,12 @@
         </nav>
     </header>
 
-    <!--       Video wil ik in de header, alleen gaat het dan fout met de z-index-->
-    <div id="videoHead">
-        <video src="https://player.vimeo.com/external/306127639.hd.mp4?s=1b378516854a65acbe9cc8f2e78e320d51dacb5e&amp;profile_id=174" data-fallback="https://static.lowlands.nl/static/images/stills/2019/04-AA_00000.png" autoplay="" loop="" muted=""></video>
-    </div>
-
     <main>
+        <!--       Video wil ik in de header, alleen gaat het dan fout met de z-index-->
+        <div id="videoHead">
+            <video src="https://player.vimeo.com/external/306127639.hd.mp4?s=1b378516854a65acbe9cc8f2e78e320d51dacb5e&amp;profile_id=174" data-fallback="https://static.lowlands.nl/static/images/stills/2019/04-AA_00000.png" autoplay="" loop="" muted=""></video>
+        </div>
+
         <section>
             <a class="artiesten" href="">
                 <article>
@@ -111,10 +111,10 @@
                 <article>
                     <!--               hier moet ik iconen gaan plaatsen-->
                     <h2>Psychydelische harmonien voor iedereen</h2>
-                        <h1>Tame Impala</h1>
-                        <div>
-                            <img src="img/tame-impala.png" alt="tame impala">
-                        </div>
+                    <h1>Tame Impala</h1>
+                    <div>
+                        <img src="img/tame-impala.png" alt="tame impala">
+                    </div>
                 </article>
             </a>
         </section>
@@ -131,11 +131,20 @@
             <li>&#xE938;</li>
         </ul>
 
-
+        <!--        hoe is het het handigst om dit naast elkaar te zetten?-->
         <form method="post" target="_blank">
             <legend>Lowlands nieuwsbrief</legend>
             <input type="email" name="email" value="" placeholder="je e-mailadres">
         </form>
+
+        <ul>
+            <li>Pers</li>
+            <li>Colofon</li>
+            <li>Adverteren</li>
+            <li>Privacy</li>
+            <li>Cookie policy</li>
+        </ul>
+
     </footer>
 
     <script src="js/javascript.js"></script>

@@ -1,4 +1,3 @@
-/*Moet nog  JS fixen*/
 * {
     padding: 0px;
     margin: 0px;
@@ -12,6 +11,11 @@
 @font-face {
     font-family: ll-icons;
     src: url("../font/ll-icons.woff");
+}
+
+::selection {
+    background-color: #0026cc;
+    color: white;
 }
 
 /*-----------Algemeen-----------*/
@@ -132,7 +136,6 @@ header ul li a:hover {
     margin: 0px 10px;
     color: white;
     width: 150px;
-    /*    moet weg?*/
     display: flex;
 }
 
@@ -147,101 +150,6 @@ header span {
     transform: rotate(180deg);
     margin: -7px 10px 0 0;
 }
-
-/*-----------Details pagina-----------*/
-#artiestInfo > div {
-    background-image:
-        url("../img/top.gif"),
-        url("../img/bottom.gif");
-    background-repeat: repeat-x;
-    background-position:
-        top,
-        bottom;
-    background-size: 90px;
-    max-width: 100vw;
-    height: 208px;
-    margin-top: 60px;
-    overflow: hidden;
-    -webkit-box-shadow: inset 0px -12px 12px -2px rgba(0, 0, 0, 0.75);
-}
-
-#artiestInfo video {
-    width: 1400px;
-    position: relative;
-    margin-top: 54px;
-}
-
-#artiestInfo {
-    background-color: #4cd066;
-    margin: auto;
-    background-image: url("../img/achtergrond4.png");
-    background-position: top;
-    background-size: 900px;
-    padding-bottom: 60px;
-}
-
-#artiestInfo article {
-    background-image: url(../img/achtergrond.png);
-    background-position: top;
-    background-size: 500px;
-    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
-    position: relative;
-    margin: 60px 20px 0;
-    padding: 1px 0;
-}
-
-#artiestInfo section {
-    background-color: #4cd066;
-    margin: 20px;
-    padding: 20px;
-    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
-    position: relative;
-    z-index: 0;
-}
-
-#artiestInfo h1 {
-    margin: 0px auto 5px 0px;
-}
-
-#artiestInfo h2 {
-    font-size: 0.8em;
-    margin: 20px auto 5px 0px;
-}
-
-#artiestInfo section div {
-    position: relative;
-    box-shadow: inset 0px 0px 10px 8px rgba(0, 0, 0, .75);
-}
-
-#artiestInfo section img {
-    width: 100%;
-    position: relative;
-    z-index: -1;
-    margin-bottom: -5px;
-}
-
-iframe {
-    width: 100%;
-    height: 40vw;
-    border: 0px;
-}
-
-#artiestInfo iframe + h2 {
-    color: black;
-    font-size: 1em;
-}
-
-h2 + ul {
-    color: white;
-    font-size: 1em;
-    font-family: LLHvH-Open89, ll-icons;
-}
-
-h2 + ul li:hover {
-    color: black;
-    transition: 0.5s all;
-}
-
 
 /*-----------Programma pagina-----------*/
 #artiesten > div {
@@ -307,6 +215,100 @@ h2 + ul li:hover {
     text-decoration: none;
 }
 
+/*-----------Details pagina-----------*/
+#artiestInfo {
+    background-color: #4cd066;
+    margin: auto;
+    background-image: url("../img/achtergrond4.png");
+    background-position: top;
+    background-size: 900px;
+    padding-bottom: 60px;
+}
+
+#artiestInfo > div {
+    background-image:
+        url("../img/top.gif"),
+        url("../img/bottom.gif");
+    background-repeat: repeat-x;
+    background-position:
+        top,
+        bottom;
+    background-size: 90px;
+    max-width: 100vw;
+    height: 208px;
+    margin-top: 60px;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px -12px 12px -2px rgba(0, 0, 0, 0.75);
+}
+
+#artiestInfo video {
+    width: 1400px;
+    margin-top: 54px;
+}
+
+#artiestInfo article {
+    background-image: url(../img/achtergrond.png);
+    background-position: top;
+    background-size: 500px;
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
+    position: relative;
+    margin: 60px 20px 0;
+    padding: 1px 0;
+}
+
+#artiestInfo section {
+    background-color: #4cd066;
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
+    position: relative;
+    z-index: 0;
+}
+
+#artiestInfo h1 {
+    margin: 0px auto 5px 0px;
+}
+
+#artiestInfo h2 {
+    font-size: 0.8em;
+    margin: 20px auto 5px 0px;
+}
+
+#artiestInfo section div {
+    position: relative;
+    box-shadow: inset 0px 0px 10px 8px rgba(0, 0, 0, .75);
+}
+
+#artiestInfo section img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    margin-bottom: -5px;
+}
+
+iframe {
+    width: 100%;
+    height: 40vw;
+    border: 0px;
+}
+
+#artiestInfo iframe + h2 {
+    color: black;
+    font-size: 1em;
+}
+
+h2 + ul {
+    color: white;
+    font-size: 1em;
+    font-family: LLHvH-Open89, ll-icons;
+    width: 130px;
+}
+
+h2 + ul li:hover {
+    color: black;
+    transition: 0.5s all;
+}
+
 /*-----------Footer-----------*/
 footer {
     position: relative;
@@ -348,6 +350,10 @@ h3 + ul li {
 
 form {
     margin: 0 10vw;
+}
+
+fieldset {
+    border: none;
 }
 
 legend {
@@ -442,7 +448,6 @@ header ul li#verbergMenu.onzichtbaarId2 {
 
     header ul li {
         margin: 0px 10px;
-        /*   maakt menu weer zichtbaar*/
         display: flex;
     }
 
@@ -455,14 +460,15 @@ header ul li#verbergMenu.onzichtbaarId2 {
         display: flex;
     }
 
-    header ul li.zichtbaar {
-        display: none;
-    }
-
     header ul li#toonMenu.zichtbaarId1,
     header ul li#toonMenu {
         display: none;
     }
+
+    header ul li#verbergMenu.zichtbaarId2 {
+        display: none;
+    }
+
 }
 
 @media screen and (min-width: 750px) {
@@ -505,7 +511,18 @@ header ul li#verbergMenu.onzichtbaarId2 {
         -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
     }
 
+    #artiestInfo > div {
+        background-size: 140px;
+        height: 310px;
+    }
+
+    #artiestInfo video {
+        width: 2000px;
+        margin-top: 84px;
+    }
+
     #artiestInfo article {
+        width: 95vw;
         max-width: 790px;
         margin: 110px auto 0;
     }
@@ -515,7 +532,7 @@ header ul li#verbergMenu.onzichtbaarId2 {
         margin: 50px auto 50px;
         padding: 50px;
     }
-    
+
     #artiestInfo section:nth-child(1) {
         margin-bottom: -25px;
     }

@@ -16,8 +16,6 @@ function toonMenu() {
         menu[i].classList.add('zichtbaar');
         menu[i].classList.remove('onzichtbaar');
     }
-    //    menu.style.display = "flex";
-    //    menuToon.style.display = "none";
 }
 
 function verbergMenu() {
@@ -30,8 +28,6 @@ function verbergMenu() {
         menu[i].classList.add('onzichtbaar');
         menu[i].classList.remove('zichtbaar');
     }
-    //    menu.style.display = "flex";
-    //    menuToon.style.display = "none";
 }
 
 toonKnop.addEventListener('click', toonMenu);

@@ -1,3 +1,4 @@
+/*Moet nog  JS fixen*/
 * {
     padding: 0px;
     margin: 0px;
@@ -25,6 +26,10 @@ body {
 
 p {
     color: black;
+    font-family: sans-serif;
+    margin: 20px auto;
+    line-height: 1.5em;
+    font-weight: 300;
 }
 
 h1 {
@@ -46,10 +51,13 @@ h2 {
 h3 {
     color: white;
     text-transform: uppercase;
+    margin-left: 10vw;
+    font-size: 1em;
 }
 
 ul {
     list-style-type: none;
+    text-transform: uppercase;
 }
 
 /*-----------Header-----------*/
@@ -68,10 +76,10 @@ nav {
 }
 
 header ul {
-    max-width: 1000px;
     width: 90vw;
     margin: auto;
     text-align: center;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
@@ -107,8 +115,136 @@ header ul li a:hover {
     transition: all 0.5s;
 }
 
-/*-----------Programma pagina-video-----------*/
-#videoHead {
+/*-----------Header Detail pagina-----------*/
+#detailNav {
+    margin: 0;
+    width: 100%;
+}
+
+#detailNav ul {
+    margin-left: 10vw;
+    text-align: left;
+    display: inherit;
+}
+
+#detailNav li {
+    padding: 7px;
+    margin: 0px 10px;
+    color: white;
+    width: 150px;
+    /*    moet weg?*/
+    display: flex;
+}
+
+#detailNav li:hover span {
+    color: #4cd066;
+    transition: 0.5s all;
+}
+
+header span {
+    font-family: ll-icons;
+    font-size: 1.3em;
+    transform: rotate(180deg);
+    margin: -7px 10px 0 0;
+}
+
+/*-----------Details pagina-----------*/
+#artiestInfo > div {
+    background-image:
+        url("../img/top.gif"),
+        url("../img/bottom.gif");
+    background-repeat: repeat-x;
+    background-position:
+        top,
+        bottom;
+    background-size: 90px;
+    max-width: 100vw;
+    height: 208px;
+    margin-top: 60px;
+    overflow: hidden;
+    -webkit-box-shadow: inset 0px -12px 12px -2px rgba(0, 0, 0, 0.75);
+}
+
+#artiestInfo video {
+    width: 1400px;
+    position: relative;
+    margin-top: 54px;
+}
+
+#artiestInfo {
+    background-color: #4cd066;
+    margin: auto;
+    background-image: url("../img/achtergrond4.png");
+    background-position: top;
+    background-size: 900px;
+    padding-bottom: 60px;
+}
+
+#artiestInfo article {
+    background-image: url(../img/achtergrond.png);
+    background-position: top;
+    background-size: 500px;
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
+    position: relative;
+    margin: 60px 20px 0;
+    padding: 1px 0;
+}
+
+#artiestInfo section {
+    background-color: #4cd066;
+    margin: 20px;
+    padding: 20px;
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, .75);
+    position: relative;
+    z-index: 0;
+}
+
+#artiestInfo h1 {
+    margin: 0px auto 5px 0px;
+}
+
+#artiestInfo h2 {
+    font-size: 0.8em;
+    margin: 20px auto 5px 0px;
+}
+
+#artiestInfo section div {
+    position: relative;
+    box-shadow: inset 0px 0px 10px 8px rgba(0, 0, 0, .75);
+}
+
+#artiestInfo section img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+    margin-bottom: -5px;
+}
+
+iframe {
+    width: 100%;
+    height: 40vw;
+    border: 0px;
+}
+
+#artiestInfo iframe + h2 {
+    color: black;
+    font-size: 1em;
+}
+
+h2 + ul {
+    color: white;
+    font-size: 1em;
+    font-family: LLHvH-Open89, ll-icons;
+}
+
+h2 + ul li:hover {
+    color: black;
+    transition: 0.5s all;
+}
+
+
+/*-----------Programma pagina-----------*/
+#artiesten > div {
     width: 100vw;
     min-width: 50px;
     overflow: hidden;
@@ -116,17 +252,14 @@ header ul li a:hover {
     -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 1);
 }
 
-video {
+#artiesten video {
     width: 200%;
     margin: 0 auto 0 -50%;
     position: fixed;
     top: 60px;
 }
 
-/*-----------Programma pagina-----------*/
-
-/*section en article moeten of algemeen worden of een id krijgen*/
-section {
+#artiesten section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -137,11 +270,10 @@ section {
     background-size: cover;
     background-position: top;
     position: relative;
-    /*    z-index: 0;*/
     -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 1);
 }
 
-article {
+#artiesten article {
     background-color: #4cd066;
     -webkit-box-shadow: inset 0px 0px 20px 12px rgba(0, 0, 0, 1);
     width: 90vw;
@@ -153,7 +285,7 @@ article {
     z-index: 0;
 }
 
-div {
+#artiesten article div {
     width: 80%;
     max-height: 230px;
     margin: 10px auto 0;
@@ -162,7 +294,7 @@ div {
     transition: 0.5s;
 }
 
-article div img {
+#artiesten article div img {
     width: 100%;
     margin: 0 auto -5px;
     position: relative;
@@ -170,7 +302,7 @@ article div img {
     transition: 0.5s;
 }
 
-.artiesten {
+#artiesten a {
     color: black;
     text-decoration: none;
 }
@@ -181,14 +313,14 @@ footer {
     background-color: #0026cc;
     z-index: 0;
     margin: 0 auto;
-    padding: 40px 10vw;
+    padding-top: 50px;
     -webkit-box-shadow: inset 0px 12px 12px -2px rgba(0, 0, 0, 0.75);
 }
 
 footer ul {
     display: flex;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin: 0 10vw 50px;
 }
 
 footer ul li {
@@ -196,11 +328,8 @@ footer ul li {
     margin: 10px 0px;
     margin-right: 30px;
     transition: all 0.5s;
+    font-size: 0.8em;
     text-transform: uppercase;
-}
-
-footer ul li:nth-child(1) {
-    margin-left: 0;
 }
 
 footer ul li:hover {
@@ -208,32 +337,52 @@ footer ul li:hover {
 }
 
 h3 + ul {
-    flex-direction: row;
-    margin-bottom: 30px;
-}
-
-h3 + ul {
     font-family: ll-icons;
-    font-size: 2.5em;
+    font-size: 3em;
+    flex-direction: row;
 }
 
 h3 + ul li {
     margin: 10px 5px;
 }
 
+form {
+    margin: 0 10vw;
+}
+
 legend {
     color: white;
     font-size: 1em;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
 }
 
 input {
     width: 100%;
-    padding: 15px 0 15px 15px;
-    margin: 0 auto 30px;
-    font-size: 1em;
+    padding: 15px 0 10px 15px;
+    margin: 10px auto 40px;
+    font-size: 0.9em;
     font-family: LLHvH-Open89;
     box-sizing: border-box;
+    text-transform: uppercase;
+}
+
+#sponsors {
+    background-color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px auto 0 0;
+    padding: 0 10vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#sponsors li {
+    margin: 10px 0px;
+}
+
+#sponsors li img {
+    height: 60px;
 }
 
 /*-----------JS classes-----------*/
@@ -273,11 +422,11 @@ header ul li#verbergMenu.onzichtbaarId2 {
         height: 2em;
     }
 
-    section {
+    #artiesten section {
         margin: 45vw auto 0;
     }
 
-    video {
+    #artiesten video {
         width: 150%;
         margin: 0 auto 0 -25%;
         top: 85px;
@@ -285,6 +434,10 @@ header ul li#verbergMenu.onzichtbaarId2 {
 
     header ul {
         justify-content: center;
+    }
+
+    #detailNAv {
+        justify-content: flex-start;
     }
 
     header ul li {
@@ -313,7 +466,6 @@ header ul li#verbergMenu.onzichtbaarId2 {
 }
 
 @media screen and (min-width: 750px) {
-
     h1 {
         font-size: 1.3em;
     }
@@ -322,52 +474,77 @@ header ul li#verbergMenu.onzichtbaarId2 {
         font-size: 0.7em;
     }
 
-    video {
+    #artiesten video {
         width: 100%;
         margin: 0 auto;
         top: 85px;
     }
 
-    section {
+    #artiesten section {
         margin: 31vw auto 0;
     }
 
-    article {
+    #artiesten article {
         width: 40vw;
         margin: 1vw;
         padding: 30px 0px;
         max-height: 290px;
     }
 
-    article div {
+    #artiesten article div {
         width: 80%;
         margin: 0px auto -5px;
         overflow: hidden;
     }
 
-    article:hover img {
+    #artiesten article:hover img {
         transform: scale(1.15);
     }
 
-    article:hover div {
+    #artiesten article:hover div {
         -webkit-box-shadow: inset 0px 0px 20px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    #artiestInfo article {
+        max-width: 790px;
+        margin: 110px auto 0;
+    }
+
+    #artiestInfo section {
+        max-width: 600px;
+        margin: 50px auto 50px;
+        padding: 50px;
+    }
+    
+    #artiestInfo section:nth-child(1) {
+        margin-bottom: -25px;
+    }
+
+    #artiestInfo iframe {
+        max-width: 600px;
+        max-height: 350px;
     }
 
     footer ul {
         flex-direction: row;
     }
 
+    form {
+        width: 35%;
+        float: right;
+    }
+
     input {
-        width: 50%;
+        margin: 10px 0 0 0;
     }
 }
 
 @media screen and (min-width: 1060px) {
-    section {
+    #artiesten section {
         margin: 25vw auto 0;
     }
 
-    video {
+    #artiesten video {
         top: 60px;
     }
 }

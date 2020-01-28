@@ -28,14 +28,14 @@
         </nav>
     </header>
 
-    <main>
-        <!--       Video wil ik in de header, alleen gaat het dan fout met de z-index-->
-        <div id="videoHead">
+    <main id="artiesten">
+        <div>
             <video src="https://player.vimeo.com/external/306127639.hd.mp4?s=1b378516854a65acbe9cc8f2e78e320d51dacb5e&amp;profile_id=174" data-fallback="https://static.lowlands.nl/static/images/stills/2019/04-AA_00000.png" autoplay="" loop="" muted=""></video>
         </div>
 
+        <!--       class artiestten moet weg-->
         <section>
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
                     <h2>Psychydelische harmonien voor iedereen</h2>
                     <h1>Tame Impala</h1>
@@ -45,9 +45,8 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
-                    <!--               hier moet ik iconen gaan plaatsen-->
                     <h2>Allround Hiphopkampioen</h2>
                     <h1>Anderson Paak</h1>
                     <div>
@@ -56,7 +55,7 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
                     <h2>Vuige hardrock voor ervaren headbangers</h2>
                     <h1>Royal Blood</h1>
@@ -66,7 +65,7 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
                     <h2>Jaren zeventig funk in een modern jasje</h2>
                     <h1>Jungle</h1>
@@ -76,7 +75,7 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
                     <h2>Ijzersterke R&amp;B in een jazzy-jasje</h2>
                     <h1>Jorja Smith</h1>
@@ -86,7 +85,7 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
                     <h2>Psychydelische harmonien voor iedereen.</h2>
                     <h1>Franz Ferdinand</h1>
@@ -96,9 +95,8 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
-                    <!--               hier moet ik iconen gaan plaatsen-->
                     <h2>Allround Hiphopkampioen</h2>
                     <h1>Anderson Paak</h1>
                     <div>
@@ -107,9 +105,8 @@
                 </article>
             </a>
 
-            <a class="artiesten" href="">
+            <a href="details.html">
                 <article>
-                    <!--               hier moet ik iconen gaan plaatsen-->
                     <h2>Psychydelische harmonien voor iedereen</h2>
                     <h1>Tame Impala</h1>
                     <div>
@@ -122,6 +119,12 @@
     </main>
 
     <footer>
+        <form method="post" target="_blank">
+            <fieldset>
+                <legend>Lowlands nieuwsbrief</legend>
+                <input type="email" name="email" value="" placeholder="je e-mailadres">
+            </fieldset>
+        </form>
 
         <h3>Volg ons</h3>
         <ul>
@@ -131,12 +134,6 @@
             <li>&#xE938;</li>
         </ul>
 
-        <!--        hoe is het het handigst om dit naast elkaar te zetten?-->
-        <form method="post" target="_blank">
-            <legend>Lowlands nieuwsbrief</legend>
-            <input type="email" name="email" value="" placeholder="je e-mailadres">
-        </form>
-
         <ul>
             <li>Pers</li>
             <li>Colofon</li>
@@ -145,6 +142,18 @@
             <li>Cookie policy</li>
         </ul>
 
+        <ul id="sponsors">
+            <li><img src="img/heineken.png" alt="heineken"></li>
+            <li><img src="img/rabobank.png" alt="rabobannk"></li>
+            <li><img src="img/coca-cola.png" alt="coca cola"></li>
+            <li><img src="img/bacardi.png" alt="bacardi"></li>
+            <li><img src="img/samsung.png" alt="samsung"></li>
+            <li><img src="img/uber.png" alt="uber"></li>
+            <li><img src="img/vpro.png" alt="vpro"></li>
+            <li><img src="img/3voor12.png" alt="3voor12"></li>
+            <li><img src="img/npo3.png" alt="npo3"></li>
+            <li><img src="img/npo3fm.png" alt="npo3fm"></li>
+        </ul>
     </footer>
 
     <script src="js/javascript.js"></script>
